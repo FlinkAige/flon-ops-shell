@@ -1,6 +1,6 @@
 shopt -s expand_aliases
 source ~/.bashrc
-focli wallet unlock -n test --password $1
+unlockt
 
 acc=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 12 | head -n 1)
 tcli system newaccount flon $acc FU8ixPk3x4wZQu1bwBtw67JznFr5LVcA9bfDpkS7grnms3JNm7Qq  --transfer-quant "10.000000 FLON" -p flon
