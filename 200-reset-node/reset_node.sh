@@ -14,8 +14,6 @@ CONTAINER_NAME=$1
 DATA_DIR="/opt/data/$1"
 APP_DIR="$HOME/.$1"
 
-rm -r $APP_DIR
-
 # Stop and remove the container if it exists
 if docker ps -a | grep -q "$CONTAINER_NAME"; then
     docker stop "$CONTAINER_NAME" >/dev/null 2>&1
