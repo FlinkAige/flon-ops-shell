@@ -6,9 +6,9 @@ if [ -z "$1" ]; then
     echo "Usage: $0 <container_name>"
     exit 1
 fi
-cd $HOME/flon-docker/flon.chain/node-run/
-bash -x ./1-setup-node-env.sh
-sleep 1
+# cd $HOME/flon-docker/flon.chain/node-run/
+# bash -x ./1-setup-node-env.sh
+# sleep 1
 
 CONTAINER_NAME=$1
 DATA_DIR="/opt/data/$1"
