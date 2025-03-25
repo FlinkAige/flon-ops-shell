@@ -4,4 +4,4 @@ wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/
 
 crontab -e
 
-*/1 * * * *  docker exec nodeos_testnet_state /bin/bash -c '/bin/bash -x /opt/data/nodeos_testnet_state/transfer.sh > /opt/data/1.log 2 >&1 &'
+*/1 * * * *  docker exec flon-wal /bin/bash -c '/bin/bash -x /root/transfer.sh PW5HyFehCJ4r4TKtUnPnLaK2SzXjhShs9rtWRkH75511RtFKceWfx > /opt/data/1.log 2 >&1 &'
