@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
     echo "Usage: $0 <container_name>"
     exit 1
 fi
-cd flon-docker/flon.chain/node-run/
+cd $HOME/flon-docker/flon.chain/node-run/
 ./1-setup-node-env.sh
 
 CONTAINER_NAME=$1
