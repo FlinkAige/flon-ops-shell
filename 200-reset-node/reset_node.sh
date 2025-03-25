@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
     exit 1
 fi
 cd $HOME/flon-docker/flon.chain/node-run/
-./1-setup-node-env.sh
+bash -x ./1-setup-node-env.sh
 sleep 1
 
 CONTAINER_NAME=$1
