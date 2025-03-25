@@ -8,6 +8,7 @@ if [ -z "$1" ]; then
 fi
 cd $HOME/flon-docker/flon.chain/node-run/
 ./1-setup-node-env.sh
+sleep 1
 
 CONTAINER_NAME=$1
 DATA_DIR="/opt/data/$1"
