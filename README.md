@@ -12,4 +12,9 @@ crontab -e
 # 200-reset-node
 
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/reset_node.sh
+chmod 777 ./reset_node.sh
+
+
+
+
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/build_node.sh
