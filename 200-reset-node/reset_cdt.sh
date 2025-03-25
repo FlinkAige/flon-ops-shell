@@ -8,6 +8,5 @@ source ~/flon.env
 
 docker run -d --name flon-build -v /opt/data:/mnt build-flon-deb:$VERSION tail -f /dev/null
 
-cd /opt/data/flon_wal 
 
-git clone 
+docker exec -it flon-build bash -c "cd /mnt/flon_wal/toolkit.contracts && build"

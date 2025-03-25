@@ -30,3 +30,7 @@ git clone git@github.com:fullon-labs/toolkit.contracts.git
 
 
 docker exec -it flon-wal bash -c "cd /opt/flon/flon-docker/flon.chain/node-boot/devnet && ./run.init.chain.sh http://hk-t3.vmi.nestar.vip:28888"
+
+docker exec -it flon-wal bash
+cd /opt/flon/toolkit.contracts
+
