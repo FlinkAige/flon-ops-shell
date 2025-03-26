@@ -9,4 +9,4 @@ source ~/flon.env
 docker run -d --name flon-build -v /opt/data:/mnt build-flon-deb:$VERSION tail -f /dev/null
 
 
-docker exec -it flon-build bash -c "cd /mnt/flon_wal/toolkit.contracts && build"
+docker exec -it flon-build bash -c "cd /mnt/flon_wal/toolkit.contracts && ./build.sh"
