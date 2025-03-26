@@ -29,6 +29,7 @@ pki "$privKey" || { echo "Error: Failed to import private key"; exit 1; }
 create_account() {
     local suffix=$1
     local funding=$2
+    local pubkey=$3
     local account_name="${account_prefix}${suffix}"
     
     echo "Creating account $account_name..."
@@ -39,11 +40,11 @@ create_account() {
 
 # 批量创建账户
 for suffix in 11 12 13 14; do
-    create_account "$suffix" "fund-account"
+    create_account "$suffix" "fund-account" $pubKey
 done
 
 for suffix in 21 22 23 24; do
-    create_account "$suffix" "fund-gas"
+    create_account "$suffix" "fund-gas" $pubKey
 done
 
 echo "All accounts created successfully."
