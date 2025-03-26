@@ -5,17 +5,10 @@ shopt -s expand_aliases
 source ~/.bashrc || { echo "Error: Failed to source ~/.bashrc"; exit 1; }
 
 # 检查是否已解锁钱包
-unlockt || { echo "Error: Failed to unlock wallet"; exit 1; }
+unlockt
 
-# 参数检查
-if [ $# -lt 3 ]; then
-    echo "Usage: $0 <creator> <account_prefix> <pubkey>"
-    exit 1
-fi
-
-creator=$1
-account_prefix=$2
-pubkey=$3
+creator="flon"
+account_prefix=$1
 fund_amount="1.00000000 FLON"
 gas_amount="1.000000000 FLON"
 
