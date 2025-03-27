@@ -2,7 +2,7 @@
 
 # 初始化环境
 shopt -s expand_aliases
-source ~/.bashrc || { echo "Error: Failed to source ~/.bashrc"; exit 1; }
+source ~/.zshrc2 || { echo "Error: Failed to source ~/.bashrc"; exit 1; }
 
 # 检查是否已解锁钱包
 unlockt
@@ -33,7 +33,7 @@ create_account() {
     local account_name="${account_prefix}${suffix}"
     
     echo "Creating account $account_name..."
-    fucli -u "$turl" system newaccount "$creator" "$account_name" "$pubkey" \
+    echo fucli -u "$turl" system newaccount "$creator" "$account_name" "$pubkey" \
         --"$funding" "$fund_amount" -p "$creator" || \
         { echo "Error: Failed to create account $account_name"; return 1; }
 }
