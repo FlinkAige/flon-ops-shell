@@ -1,26 +1,21 @@
+```bash
+# Install dependencies
+sudo apt update && sudo apt install -y wget bc
 
-apt install wget bc
+# Setup flon-ops-shell
+mkdir -p ~/flon-ops && cd ~/flon-ops
 
-# flon-ops-shell
+# Download transfer script
+wget -q https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/main/100-flon-node-add-account/transfer.sh -O transfer.sh
+chmod +x transfer.sh
 
-wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/100-flon-node-add-account/transfer.sh
+# Setup cron job (run every minute)
+(crontab -l 2>/dev/null; echo "*/1 * * * * docker exec flon_wal /bin/bash -c '/bin/bash -x /opt/data/transfer.sh > /opt/data/transfer.log 2>&1'") | crontab -
 
-crontab -e
+# Download and setup reset-node scripts
+wget -q https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/main/200-reset-node/{reset_node.sh,build_node.sh,reset_wal.sh}
+chmod +x {reset_node.sh,reset_wal.sh}
 
-*/1 * * * *  docker exec flon_wal /bin/bash -c '/bin/bash -x /opt/data/transfer.sh > /opt/data/1.log 2 >&1 &'
-
-# 200-reset-node
-
-wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/reset_node.sh
-chmod 777 ./reset_node.sh
-
+# Execute reset scripts
 ./reset_node.sh flon_devnet_01
-
-
-wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/build_node.sh
-
-
-wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/reset_wal.sh
-chmod 777 ./reset_wal.sh
-
-./reset_wal.sh 
+./reset_wal.sh
