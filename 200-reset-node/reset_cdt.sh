@@ -6,7 +6,7 @@ if [ -z "~/flon.env" ]; then
 fi
 source ~/flon.env
 
-docker run -d --name flon-build -v /opt/data:/mnt ${NODE_IMG_HEADER}fullon/floncdt$VERSION tail -f /dev/null
+docker run -d --name flon-build -v /opt/data:/mnt ${NODE_IMG_HEADER}fullon/floncdt:$VERSION tail -f /dev/null
 
 
 docker exec -it flon-build bash -c "cd /mnt/flon_wal/toolkit.contracts && ./build.sh"
