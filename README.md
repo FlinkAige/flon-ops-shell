@@ -17,7 +17,9 @@ crontab -e
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/build_node.sh
 
 ```
-
+```bash
+cat ~/ghcr.txt | docker login ghcr.io -u "$GITHUB_USERNAME" --password-stdin
+```
 ```bash
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/reset_node.sh
 chmod 777 ./reset_node.sh
