@@ -37,6 +37,6 @@ chmod 777 ./reset_wal.sh
 
 ```bash
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/reset_cdt.sh
-chmod 777 ./reset_wal.sh
-./reset_wal.sh htttp://hk-t3.vmi.nestar.vip:28888
+chmod 777 ./reset_cdt.sh
+./reset_cdt.sh
 ```

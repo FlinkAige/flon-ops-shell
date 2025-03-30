@@ -1,6 +1,6 @@
 CONTAINER_NAME=flon_wal
 
-DATA_DIR="/opt/data/$CONTAINER_NAME"
+DATA_DIR="~/$CONTAINER_NAME"
 
 # Stop and remove the container if it exists
 if docker ps -a | grep -q "$CONTAINER_NAME"; then
@@ -22,18 +22,11 @@ fi
 cd $HOME/flon-docker/flon.chain/node-wal/
 ./run-fuwal.sh $DATA_DIR
 
+cd $HOME/flon-docker/flon.chain/node-boot
+./docker.run.sh $1 
 
 cd $DATA_DIR
-
-git clone git@github.com:FlinkAige/flon-docker.git
-git clone git@github.com:fullon-labs/toolkit.contracts.git
+git clone https://github.com/fullon-labs/toolkit.contracts.git
 
 
-docker exec -it flon_wal bash -c "cd /opt/flon/flon-docker/flon.chain/node-boot/devnet && ./run.init.chain.sh \"$1\""
-
-docker exec -it flon_wal bash
-
-
-cd /opt/flon/toolkit.contracts
-
-
+git clone https://github.com/fullon-labs/flon.contracts.git
