@@ -10,3 +10,4 @@ docker run -d --name flon-build -v ~/:/mnt ${NODE_IMG_HEADER}fullon/floncdt:$VER
 
 
 docker exec -it flon-build bash -c "cd /mnt/fuwal/toolkit.contracts && ./build.sh"
+docker exec -it flon-build bash -c "cd /mnt/fuwal/flon.contracts && ./build.sh"
