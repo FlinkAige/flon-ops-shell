@@ -20,7 +20,7 @@ git clone https://github.com/fullon-labs/flon.contracts.git
 git clone https://github.com/fullon-labs/toolkit.contracts.git
 
 ./download_package.sh flon.cdt $CDT_VERSION
-./download_package.sh fullon $VERSION
+./download_package.sh fullon $FULLON_VERSION
 
 # 进入容器
 docker exec -it flon_devnet_01 bash
