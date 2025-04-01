@@ -8,8 +8,6 @@ if [ -z "~/flon.env" ]; then
 fi
 source ~/flon.env
 
-
-
 docker_instance_name=flon_devnet_01
 ./reset_node.sh $flon_devnet_01
 CONTRACT_PATH=/opt/data/flon_devnet_01/contracts
@@ -25,13 +23,7 @@ git clone https://github.com/fullon-labs/toolkit.contracts.git
 # 进入容器
 docker exec -it flon_devnet_01 bash
 
-# 安装依赖
-apt install -y libssl-dev libboost-all-dev libgmp3-dev libbz2-dev libreadline-dev libncurses5-dev libusb-1.0-0-dev libudev-dev libusb-dev libusb-1.0-0
-apt install libcurl4-gnutls-dev cmake -y
-cd $CONTRACT_PATH/flon.contracts
-build
-cd $CONTRACT_PATH/toolkit.contracts
-build
+#在容器里执行 2_build_contract.sh
 
 
 
