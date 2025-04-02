@@ -6,6 +6,8 @@ apt install libcurl4-gnutls-dev cmake -y
 
 
 cd $CONTRACT_PATH/flon.contracts
-build
+./build.sh -y
 cd $CONTRACT_PATH/toolkit.contracts
-build
+./build.sh -y
+cd $CONTRACT_PATH/fufi.contracts
+./build.sh -y 
