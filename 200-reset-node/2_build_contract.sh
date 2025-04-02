@@ -2,6 +2,13 @@
 CONTRACT_PATH=$1/contracts
 CONTRACT_PATH=/opt/data/flon_devnet_02/contracts
 
+#删除无效的文件
+cd /usr/local/lib/cmake
+rm -rf flon.cdt
+cd ../../bin
+rm -rf cdt-*
+
+
 # 安装依赖
 apt update
 apt install -y libssl-dev libboost-all-dev libgmp3-dev libbz2-dev libreadline-dev libncurses5-dev libusb-1.0-0-dev libudev-dev libusb-dev libusb-1.0-0
