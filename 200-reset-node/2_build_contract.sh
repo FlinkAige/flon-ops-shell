@@ -6,6 +6,8 @@ CONTRACT_PATH=/opt/data/flon_devnet_02/contracts
 apt update
 apt install -y libssl-dev libboost-all-dev libgmp3-dev libbz2-dev libreadline-dev libncurses5-dev libusb-1.0-0-dev libudev-dev libusb-dev libusb-1.0-0
 apt install libcurl4-gnutls-dev cmake -y
+apt install -y g++
+apt install libz3-dev
 
 cd $CONTRACT_PATH/
 apt-get install -y ./flon.cdt_0.3.0-alpha_amd64.deb
