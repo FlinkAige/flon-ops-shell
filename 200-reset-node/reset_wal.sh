@@ -30,3 +30,5 @@ git clone https://github.com/fullon-labs/toolkit.contracts.git
 
 
 git clone https://github.com/fullon-labs/flon.contracts.git
+git clone  git@github.com:fullon-labs/interop.contracts.git
+git checkout flon-dev

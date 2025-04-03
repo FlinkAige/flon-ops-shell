@@ -10,7 +10,7 @@ source ~/flon.env
 
 docker_instance_name=flon_devnet_02
 ./reset_node.sh $docker_instance_name
-CONTRACT_PATH=/opt/data/${docker_instance_name}/contracts
+CONTRACT_PATH=~/fuwal/contracts
 mkdir -p $CONTRACT_PATH
 cd  $CONTRACT_PATH
 
@@ -19,6 +19,12 @@ git clone https://github.com/fullon-labs/toolkit.contracts.git
 git clone git@gitlab.com:fufidev/wasm/fufi.contracts.git
 cd fufi.contracts
 git checkout flon-dev
+
+cd $CONTRACT_PATH
+git clone git@github.com:truedex-labs/xchain.contracts.git
+cd xchain.contracts
+git checkout flon-dev
+cd $CONTRACT_PATH
 
 
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/download_package.sh

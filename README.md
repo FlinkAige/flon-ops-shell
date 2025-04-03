@@ -44,7 +44,7 @@ chmod 777 ./reset_cdt.sh
 
 ```bash
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/download_package.sh
-chmod 777 ./reset_cdt.sh
+chmod 777 ./download_package.sh
 ./reset_cdt.sh
 ```
 
