@@ -1,6 +1,7 @@
 CONTAINER_NAME=fuwal
 
 DATA_DIR="~/${CONTAINER_NAME}/"
+DATA_DIR=$(realpath "$DATA_DIR")      
 
 # Stop and remove the container if it exists
 if docker ps -a | grep -q "$CONTAINER_NAME"; then
