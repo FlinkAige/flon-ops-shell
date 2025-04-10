@@ -1,14 +1,12 @@
 
-apt install wget bc
-
 # flon-ops-shell
-
+apt install wget bc
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/100-flon-node-add-account/transfer.sh
 chmod 777 ./transfer.sh
 
 crontab -e
 
-*/1 * * * *  docker exec flon_wal /bin/bash -c '/bin/bash -x /opt/data/transfer.sh > /opt/data/1.log 2 >&1 &'
+*/1 * * * *  docker exec fuwal /bin/bash -c '/bin/bash -x /opt/data/transfer.sh > /opt/data/1.log 2 >&1 &'
 
 # 200-reset-node
 
