@@ -32,7 +32,7 @@ chmod 777 ./reset_node.sh
 ```bash
 wget https://raw.githubusercontent.com/FlinkAige/flon-ops-shell/refs/heads/main/200-reset-node/reset_wal.sh
 chmod 777 ./reset_wal.sh
-./reset_wal.sh htttp://hk-t3.vmi.nestar.vip:28888
+./reset_wal.sh htttp://hk-t1.vmi.nestar.vip:28888
 ```
 
 ```bash
